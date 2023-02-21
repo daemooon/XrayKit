@@ -8,10 +8,14 @@ let package = Package(
     .library(name: "XrayKit", targets: ["XrayKit"])
   ],
   targets: [
-    .binaryTarget(
+    .target(
       name: "XrayKit",
-      url: "https://github.com/daemooon/XrayKit/releases/download/0.1.4/XrayKit.xcframework.zip",
-      checksum: "6e370c1264f1a38769b6f4fae5cbc8079197433ed49394264be2b526cc325257"
+      dependencies: ["Tun2socks"]
+    ),
+    .binaryTarget(
+      name: "Tun2socks",
+      url: "https://github.com/EbrahimTahernejad/T2SXRay/releases/download/v0.2.1/Tun2socks.xcframework.zip",
+      checksum: "cdfba88559263dbf23327aa57fef7c1237984bc4a6bfb1debef513733cbf25ab"
     )
   ]
 )
